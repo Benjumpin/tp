@@ -61,7 +61,7 @@ public class AliasTest {
         // different values -> returns false
         assertFalse(alias.equals(new Alias("Other Alias")));
 
-        // different case -> returns false (equals is case-sensitive)
-        assertFalse(alias.equals(new Alias("valid alias")));
+        // different case -> returns true (equals is case-insensitive)
+        assertTrue(alias.equals(new Alias("valid alias")));
     }
 }
