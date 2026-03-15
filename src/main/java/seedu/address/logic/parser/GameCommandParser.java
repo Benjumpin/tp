@@ -35,7 +35,7 @@ public class GameCommandParser implements Parser<Command> {
 
         case seedu.address.logic.commands.ListGameCommand.COMMAND_WORD:
             return new ListGameCommandParser().parse(arguments);
-            
+
         default:
             throw new ParseException(MESSAGE_UNKNOWN_COMMAND);
         }

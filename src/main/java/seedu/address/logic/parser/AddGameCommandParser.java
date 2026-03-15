@@ -25,7 +25,7 @@ public class AddGameCommandParser implements Parser<AddGameCommand> {
 
         Name name = ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME).get());
 
-        // We will parse the game string directly here to keep it simple, 
+        // We will parse the game string directly here to keep it simple,
         // similar to how tags are parsed.
         String gameString = argMultimap.getValue(PREFIX_GAME).get();
         if (!Game.isValidGameName(gameString)) {

@@ -73,8 +73,8 @@ public class DeleteGameCommand extends Command {
         model.setPerson(personToEdit, editedPerson);
         model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
 
-        return new CommandResult(String.format(MESSAGE_SUCCESS, 
-                gameToDelete.gameName, 
+        return new CommandResult(String.format(MESSAGE_SUCCESS,
+                gameToDelete.gameName,
                 editedPerson.getName().fullName));
     }
 
