@@ -83,8 +83,11 @@ public class CommandResultTest {
         CommandResult commandResult = new CommandResult("feedback");
         String expected = CommandResult.class.getCanonicalName() + "{feedbackToUser="
                 + commandResult.getFeedbackToUser() + ", showHelp=" + commandResult.isShowHelp()
-                + ", exit=" + commandResult.isExit() + ", awaitingConfirmation="
-                + commandResult.isAwaitingConfirmation() + "}";
-        assertEquals(expected, commandResult.toString());
+                + ", exit=" + commandResult.isExit()
+                + ", awaitingConfirmation=" + commandResult.isAwaitingConfirmation()
+                + ", pendingPerson=" + commandResult.getPendingPerson()
+                + ", personToView=" + commandResult.getViewedPerson() + "}";
+
+        org.junit.jupiter.api.Assertions.assertEquals(expected, commandResult.toString());
     }
 }

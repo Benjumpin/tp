@@ -27,6 +27,7 @@ import seedu.address.logic.commands.FindCommand;
 import seedu.address.logic.commands.HelpCommand;
 import seedu.address.logic.commands.ListCommand;
 import seedu.address.logic.commands.ListGameCommand;
+import seedu.address.logic.commands.ViewCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.game.Game;
 import seedu.address.model.person.Alias;
@@ -153,5 +154,11 @@ public class AddressBookParserTest {
         ListGameCommand command = (ListGameCommand) parser.parseCommand(
                 "game list n/Benjamin");
         assertEquals(new ListGameCommand(null, new Name("Benjamin")), command);
+    }
+
+    @Test
+    public void parseCommand_view() throws Exception {
+        ViewCommand command = (ViewCommand) parser.parseCommand("view n/Alice");
+        assertEquals(new ViewCommand(null, new Name("Alice")), command);
     }
 }
